@@ -7,6 +7,7 @@
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require('jquery')
 
 import Rails from "@rails/ujs";
 window.Rails = Rails;
