@@ -107,7 +107,7 @@ export function get_link() {
     Rails.ajax({
       url: "/links/get_new_link",
       type: "get",
-      success: function(data) { $("#link").val( 'http://localhost:3000/links/'+data ); }
+      success: function(data) { $("#link").val( 'https://guesswhere12.herokuapp.com/'+data ); }
     })
     }
     
