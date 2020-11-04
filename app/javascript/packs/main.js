@@ -25,7 +25,7 @@ $( document ).ready(function() {
         
     });
 
-    function update_score_bar(data) {
+export function update_score_bar(data) {
 
          let base_width = 200;
 
@@ -38,7 +38,7 @@ $( document ).ready(function() {
     }
 
 
-    function change_score(played,guessed,attempt) {
+export function change_score(played,guessed,attempt) {
 
         Rails.ajax({
        
@@ -54,7 +54,7 @@ $( document ).ready(function() {
         });
 
     }
-    function clear_map() {
+export function clear_map() {
 
     for (let i = 0; i < markers.length; i++) {
 
