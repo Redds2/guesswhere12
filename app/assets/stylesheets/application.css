@@ -13,3 +13,89 @@
  *= require_tree .
  *= require_self
  */
+
+
+    html {
+
+        text-align:center;
+        font-family:verdana;
+    }
+    table {
+        font-size: 10px;
+         border-collapse: collapse;
+
+
+    }
+    table td {
+        padding: 0;
+    }
+    table tr {
+        padding: 0;
+    }
+    .menu-item {
+
+        border:1px solid black;
+        border-radius:5px;
+        padding:10px;
+        width:200px;
+        text-align:center;
+        margin:5px;
+
+    }
+    .menu-item:hover{
+        background-color:black;
+        color:white;
+        cursor:pointer;
+    }
+    .info-box {
+        z-index:1000;
+        display:none;
+        background-color:#3E4345;
+        color:white;
+        position:absolute;
+        border-radius: 5px;
+        font-size: 12px;
+        width:250px;
+        padding:10px;
+        padding-left:10px;
+        padding-right:10px;
+        word-wrap: break-word;
+        margin:10px;
+    }
+    button {
+
+        font-size:10px;
+
+        border:none;
+        padding:5px;
+
+
+    }
+    .score-bar {
+        padding:5px;
+        min-width:20px;
+        height:20px;
+
+        border-radius:0px 10px 10px 0px;
+        color:white;
+
+    }
+    #played {
+        background-color:#6699CC;
+    }
+
+    #guessed {
+        background-color:#009933;
+    }
+
+    #first_try {
+        background-color:#990033;
+    }
+
+    #second_try {
+        background-color:#FF9933;
+    }
+
+    #third_try {
+        background-color:#009999;
+    }
