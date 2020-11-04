@@ -108,10 +108,10 @@ export function toggle_two(obj1,obj2) {
     }
     
 export function get_link() {
-    $.ajax({
+    Rails.ajax({
       url: "/links/get_new_link",
       type: "GET",
-      success: function(data) { $("#link").val( 'https://guesswhere12.herokuapp.com/'+data ); }
+      success: function(data) {$("#link").val( 'https://guesswhere12.herokuapp.com/'+data ); }
     })
     }
     
