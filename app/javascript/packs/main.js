@@ -1,9 +1,11 @@
+
+
 var markers = [];
 var map;
 
 $( document ).ready(function() {
         change_score(0,0,0);
-        
+         
             DG.then(function () {
                 map = new DG.map('map', {
                     center: [40.0, 10.0],
@@ -40,13 +42,15 @@ export function update_score_bar(data) {
 
 export function change_score(played,guessed,attempt) {
 
-        Rails.ajax({
-       
+
+         var $crf_token = $('[name="csrfmiddlewaretoken"]').attr('value');
+        $.ajax({
+        headers:{"X-CSRFToken": $crf_token},
         url: "/change_score",
-        type: "GET",
+        type: "POST",
         data: { played:played,guessed:guessed,first_try: +(attempt==1) ,second_try: +(attempt==2),third_try: +(attempt==3) },
         success: function(data){
-           
+         
          update_score_bar(data);
 
 
@@ -66,7 +70,7 @@ export function get_random_photo() {
 
     clear_map();
 
-    Rails.ajax({
+    $.ajax({
     url: "/get_random_photo",
     type:"GET",
     success: function(data){
@@ -104,9 +108,9 @@ export function toggle_two(obj1,obj2) {
     }
     
 export function get_link() {
-    Rails.ajax({
+    $.ajax({
       url: "/links/get_new_link",
-      type: "get",
+      type: "GET",
       success: function(data) { $("#link").val( 'https://guesswhere12.herokuapp.com/'+data ); }
     })
     }

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'welcome#index'
+  root 'links#index'
 
-  get '/change_score', to: 'score#change_score'
+  post '/change_score', to: 'score#change_score'
   get '/get_random_photo', to: 'image#get_random_photo'
   
   get '/links/get_new_link'

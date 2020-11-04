@@ -9,10 +9,10 @@ require("@rails/activestorage").start()
 require("channels")
 require('jquery')
 
+require('packs/main')
+
 import Rails from "@rails/ujs";
 window.Rails = Rails;
-
-
 
 import {get_random_photo} from 'packs/main'
 import {change_score} from 'packs/main'
